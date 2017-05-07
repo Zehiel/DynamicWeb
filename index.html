@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            processEscapes: true
+        }
+    });
+</script>
+
+</head>
+<body>
+    <header class="col-12">
+        <h1>Praca Domowa 1</h1>
+    </header>
+    <div class="middle-container col-12">
+        <nav class="col-3 left">
+            <ul>
+                <li><a href="link1">Menu item 1</a></li>
+                <li><a href="link1">Menu item 2</a></li>
+                <li><a href="link1">Menu item 3</a></li>
+                <li><a href="link1">Menu item 4</a></li>
+            </ul>
+        </nav>
+        <section class="col-6">
+            <header>
+               Section header
+            </header>
+            <article contenteditable="true">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare urna non bibendum lobortis. Ut ac magna iaculis, pharetra mauris non, ornare tortor. In hendrerit interdum odio eget porttitor. Aliquam consequat purus vitae lectus condimentum mollis. Nullam ipsum felis, porta sed aliquam at, pellentesque scelerisque nunc. In bibendum, est vel commodo ullamcorper, nibh libero vulputate leo, ut tincidunt nibh massa et arcu. Morbi eget cursus risus. Nulla commodo, sem non rutrum consequat, neque leo convallis dui, vitae facilisis sapien est sit amet lacus. Sed ante diam, eleifend et sem in, eleifend mollis lorem. Donec eget tempor urna, et placerat velit. Quisque semper, mauris vel scelerisque scelerisque, mi nisi semper neque, eu hendrerit ante nisl id felis. Donec non rutrum ex. Donec quis tortor non nibh varius dapibus sed vitae ex. Nulla commodo velit dolor, a efficitur tellus dignissim ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam rhoncus eros orci, a cursus orci tincidunt quis.<br><br>
+                <video width="340" height="260" controls>
+                    <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                    Your browser does not support the video tag.
+                </video>
+
+            </article>
+            <footer>
+                <audio controls>
+                    <source src="http://www.noiseaddicts.com/samples_1w72b820/274.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </footer>
+        </section>
+        <aside class="col-3 right">
+            <label for="meeting">Meeting Date : </label><input type="date"/><br><br>
+            <label for="fav_color">Favorite color : </label><input type="color"/><br><br>
+            <canvas id="myCanvas" width="200" height="100">Your browser does not support the HTML5 canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(95,50,40,0,2*Math.PI);
+                ctx.stroke();
+            </script>
+            <br>
+
+        </aside>
+    </div>    
+    <footer class="col-12">
+
+       $$ ||F(x)-f(x)|| = \intop\nolimits_{a} ^ {b} w(x)[F(x)-f(x)]^2 dx $$
+       $$ F(x)=   \sum_{i=0}^{m}  a_i  \varphi_i (x) $$
+       $$ r_0 =  \sqrt {\frac {{b_1^2} + {b_2^2}}{4} - b_3 } = 1.8212 $$
+
+    </footer>
+</body>
+</html>
