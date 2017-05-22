@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     var navListItems = $('ul.setup-panel li a'),
         allWells = $('.setup-content');
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
         e.preventDefault();
         var $target = $($(this).attr('href')),
             $item = $(this).closest('li');
-        
+
         if (!$item.hasClass('disabled')) {
             navListItems.closest('li').removeClass('active');
             $item.addClass('active');
@@ -18,33 +18,90 @@ $(document).ready(function() {
             $target.show();
         }
     });
-    
+
     $('ul.setup-panel li.active a').trigger('click');
-    
+
     // DEMO ONLY //
     $('#activate-step-2').on('click', function(e) {
         $('ul.setup-panel li:eq(1)').removeClass('disabled');
         $('ul.setup-panel li a[href="#step-2"]').trigger('click');
         $(this).remove();
     })
-    
+
     $('#activate-step-3').on('click', function(e) {
         $('ul.setup-panel li:eq(2)').removeClass('disabled');
         $('ul.setup-panel li a[href="#step-3"]').trigger('click');
         $(this).remove();
     })
-    
+
     $('#activate-step-4').on('click', function(e) {
         $('ul.setup-panel li:eq(3)').removeClass('disabled');
         $('ul.setup-panel li a[href="#step-4"]').trigger('click');
         $(this).remove();
     })
-    
+
     $('#activate-step-3').on('click', function(e) {
         $('ul.setup-panel li:eq(2)').removeClass('disabled');
         $('ul.setup-panel li a[href="#step-3"]').trigger('click');
         $(this).remove();
     })
+
+    $('#nameinput').keyup(function (event) {
+
+        var value = $(this).val();
+        if (value.length > 0) {
+            var patt =  new  RegExp(/^[A-Z].[a-zA-Z]{1,18}$/);
+            if(patt.test(value)){
+                document.getElementById("name").style.background = "green"
+            }else {
+                document.getElementById("name").style.background = "red"
+            }
+
+        }
+    });
+
+    $('#surnameinput').keyup(function (event) {
+
+        var value = $(this).val();
+        if (value.length > 0) {
+            var patt =  new  RegExp(/^[A-Z].[a-zA-Z]{1,18}$/);
+            if(patt.test(value)){
+                document.getElementById("surname").style.background = "green"
+            }else {
+                document.getElementById("surname").style.background = "red"
+            }
+
+        }
+    });
+
+    $('#cityinput').keyup(function (event) {
+
+        var value = $(this).val();
+        if (value.length > 0) {
+            var patt =  new  RegExp(/^[A-Z].[a-zA-Z]{1,18}$/);
+            if(patt.test(value)){
+                document.getElementById("city").style.background = "green"
+            }else {
+                document.getElementById("city").style.background = "red"
+            }
+
+        }
+    });
+
+
+    $('#regioninput').keyup(function (event) {
+
+        var value = $(this).val();
+        if (value.length > 0) {
+            var patt =  new  RegExp(/^[A-Z].[a-zA-Z]{1,18}$/);
+            if(patt.test(value)){
+                document.getElementById("region").style.background = "green"
+            }else {
+                document.getElementById("region").style.background = "red"
+            }
+
+        }
+    });
 });
 
 
