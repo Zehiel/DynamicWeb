@@ -1,0 +1,69 @@
+<html>
+	<head>
+        <title>Lab 3</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script "text/javascript" src="scripts.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12" id="title">
+					Gra Węgry
+				</div>
+			</div>
+			
+			<div class="row" id="start">
+				<div id="startButton" >
+					Start
+				</div>
+			</div>
+			
+			<div class="row" id="game">
+				<div class="col-md-12" >
+					<table>
+						<tbody id="t1">
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row" id="hud">
+				<div class="col-md-2" >Kliknąłeś : <div id="clicks">0</div>razy</div>
+				<div class="col-md-2" >Od startu mineło: <div id="time">00:00:00</div></div>
+			</div>
+			
+			<div class="row" id="top">				
+				<div class="col-md-4" >Pseudonim
+					<input type="text" id="nickInput"/>
+				</div>
+				<div class="col-md-4" >Wybór poziomu losowości
+					<select>
+						<option value="all">Domyślny</option>
+						<option value="0">1</option>
+						<option value="1">2</option>
+						<option value="2">3</option>
+					</select>
+				</div> 	
+			</div>			
+			<div class="row" id="hiScore">
+				<div class="col-md-2" id="number">1</div>
+				<div class="col-md-4" id="nick"></div>
+				<div class="col-md-2" id="level"></div>
+				<div class="col-md-2" id="finishScore"></div>
+				<div class="col-md-2" id="finishTime"></div>
+				<div class="col-md-2" id="finishClicks"></div>
+			</div>
+			<div class="row" id="return">
+				<div id="returnButton" >
+					Powrót
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

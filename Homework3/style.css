@@ -1,0 +1,87 @@
+#startButton, #returnButton {
+	margin: auto;
+	margin-top:50px;
+	margin-bottom:50px;
+	padding:10px 20px;
+	max-width: 150px;
+	color: white;
+	border-radius: 20px;
+	background-color: rgb(74, 187, 224);
+	font-weight: 900;
+	font-size: 18pt;
+	text-align: center;
+
+}
+
+#game, #hud, #hiScore, #hiScoreLegend, #topTen, #return {
+	display: none;
+}
+
+#hud {
+	margin:auto;
+}
+
+table, td {
+	margin: 0 auto;
+	border: 5px solid black;
+}
+
+select {
+	color:black;
+}
+
+.container-fluid {
+	background-color: black;
+}
+body {
+	background-color: black;
+}
+
+#hud, #top {
+	color: white;
+}
+#title {
+	margin: auto;
+	color: white;
+	font-weight: 500;
+	font-size: 28pt;
+	text-align: center;
+	background-color: rgb(74, 187, 224);
+	border-radius: 40px;
+}
+
+.col-md-12 {
+	margin-top: 50px;
+}
+
+#topTen {
+	margin:	auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 18pt;
+}
+
+#topTenTitle {
+	color: white;
+	font-weight: 900;
+	font-size: 24pt;
+	text-align: center;
+	background-color: rgb(74, 187, 224);
+}
+
+td {
+	height: 50px;
+	width: 50px;
+}
+
+#hiScore, #hiScoreLegend {
+	font-weight: 900;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	background-color: rgb(74, 132, 224);
+}
+
+#hiScore {
+	background-color: rgb(74, 187, 224);
+}
