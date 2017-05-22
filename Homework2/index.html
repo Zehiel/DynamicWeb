@@ -19,7 +19,7 @@
 
 	<!-- Custom styles for this template -->
 	<link href="starter-template.css" rel="stylesheet">
-
+	<script type="text/javascript" src="./js/zxcvbn.js"></script>
 	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 	<script src="./js/ie-emulation-modes-warning.js"></script>
@@ -37,6 +37,7 @@
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
 	<![endif]-->
 </head>
 
@@ -185,7 +186,7 @@
 											Postal code
 										</th>
 										<td>
-											<input type="text" name='postal-code' placeholder='Postal code' class="form-control"/>
+											<input type="text" name='postal-code' id="postalcodeinput" placeholder='Postal code' class="form-control"/>
 										</td>
 									</tr>
 									<tr id='region-row'>
@@ -232,7 +233,7 @@
 											E-mail
 										</th>
 										<td>
-											<input type="text" name='email'  placeholder='Email' class="form-control"/>
+											<input type="text" name='email'  id="emailinput" placeholder='Email' class="form-control"/>
 										</td>
 									</tr>
 									<tr id='ip-row'>
@@ -241,7 +242,7 @@
 											IP
 										</th>
 										<td>
-											<input type="text" name='ip' placeholder='IP' class="form-control"/>
+											<input type="text" name='ip' id="ipinput" placeholder='IP' class="form-control"/>
 										</td>
 									</tr>
 									<tr id='url-row'>
@@ -250,7 +251,7 @@
 											URL
 										</th>
 										<td>
-											<input type="text" name='url' placeholder='URL' class="form-control"/>
+											<input type="text" name='url' placeholder='URL' id="urlinput" class="form-control"/>
 										</td>
 									</tr>
 									<tr id='password-row'>
@@ -259,7 +260,9 @@
 											Password
 										</th>
 										<td>
-											<input type="password" name='password' placeholder='Password' class="form-control"/>
+											<input type="password" name='password' placeholder='Password' id="passwordinput" class="form-control"/>
+											<meter max="4" id="password-strength-meter"></meter>
+											<p id="password-strength-text"></p>
 										</td>
 									</tr>
 									</tbody>
