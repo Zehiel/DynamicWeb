@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Interaktywny terminarz</title> 
+
+<!-- Importuj jQuery -->
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- Importuj AngularJS -->
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+
+<!-- Importuj Booststrap --> 
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+
+<!-- Importuj kod aplikacji --> 
+<script type="text/javascript" src="sample.js"></script> 
+<link href="css/sample.css" rel="stylesheet" type="text/css">  </head>
+<body>    <h1>Interaktywny terminarz</h1> 
+<!-- ten blok definiuje sekcję aplikacji reminderApp --> 
+<div ng-app="reminderApp">
+
+<!-- Ten blok definiuje kontroler ReminderCtrl -->
+<div ng-controller="ReminderCtrl"> 
+<table class="table table-bordered"> 
+<thead>
+<th>Tytuł</th><th>Opis</th><th>Data i czas wydarzenia</th><th>Ile minut wcześniej wyświetlić przypomnienie?</th> <th ng-if="reminders.length >0">Operacja</th>          
+</thead>
+
+<!-- prezentacja zawartości modelu w każdym wierszu osobny obiekt użytkownika -->
+<tbody ng-repeat="reminder in reminders" ng-switch on="reminder.state">
+
+<!-- Szablon edycji użytkownika --> 
+<tr ng-switch-when="edit"> 
+<td> <input type="text" readonly class="form-control" ng-model="reminder.name" />     </td>
+<td> <input type="text" readonly class="form-control" ng-model="reminder.description" /> </td> 
+<td> <input type="datetime-local" class="form-control" ng-model="reminder.date" />   </td>             
+<td> <input type="text" class="form-control" ng-model="reminder.remind" />   </td>              
+<td> <input type="button" class="btn btn-success" ng-click="saveReminder(reminder);" value="Save" /> </td>              
+<td> <input type="button" class="btn btn-danger" ng-click="cancelEdit(reminder);" value="Cancel" /></td>  
+</tr>
+
+<!-- Szablon wyświetlania użytkownika -->           
+<tr ng-switch-default>
+<td>{{reminder.name}} </td>
+<td>{{reminder.description}}</td>
+<td>{{reminder.date | date: 'dd/MM/yyyy HH:mm'}}</td> 
+<td>{{reminder.remind}}</td>
+<td><input type="button" class="btn btn-primary" ng-click="editReminder(reminder);" value="Edit" /></td>              
+<td><input type="button" class="btn btn-danger" ng-click="deleteReminder(reminder);" value="Delete"/></td>
+</tr>
+<!-- Formularz dodawania rekordu -->          
+<tbody>           
+<tr>
+<td><input type="text" class="form-control" ng-model="newReminder.name" />                       </td>
+<td><input type="text" class="form-control" ng-model="newReminder.description" />                   </td>
+<td><input type="datetime-local" class="form-control" ng-model="newReminder.date">     </td>
+<td><input type="text" class="form-control" ng-model="newReminder.remind" />     </td>
+<td><input type="button" class="btn btn-primary" ng-click="addReminder();" value="Add"/></td>
+</tr> 
+</tbody> 
+</table>
+</div>
+</div>
+</body>
+</html>
+
